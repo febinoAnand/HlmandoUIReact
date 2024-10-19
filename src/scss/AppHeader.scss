@@ -3,22 +3,22 @@ $app-primary-color: #007bff;
 
 .app-container {
   display: flex;
-  height: 100vh; /* Full height for the container */
+  height: 100vh; 
 }
 
 .app-sidebar {
   background-color: $app-primary-color; 
   color: white;
-  transition: transform 0.3s ease; /* Smooth transition for sidebar */
-  transform: translateX(-100%); /* Start hidden by moving offscreen */
-  position: fixed; /* Fixed positioning for overlay */
-  height: 100%; /* Full height */
-  top: 0; /* Align to top */
-  left: 0; /* Align to left */
-  z-index: 2000; /* High z-index for overlay effect */
+  transition: transform 0.3s ease; 
+  transform: translateX(-100%); 
+  position: fixed; 
+  height: 100%; 
+  top: 0;
+  left: 0; 
+  z-index: 2000; 
 
   &.visible {
-    transform: translateX(0); /* Bring back into view when visible */
+    transform: translateX(0);
   }
 }
 
@@ -28,14 +28,14 @@ $app-primary-color: #007bff;
   background-color: $app-background;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   z-index: 1000;
-  padding: 0.5rem 1rem; /* Reduced padding for a smaller header */
-  height: 50px; /* Adjust the height as needed */
+  padding: 0.5rem 1rem; 
+  height: 60px; 
 
   .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 100%; /* Ensure children fit within the new header height */
+    height: 100%; 
   }
 
   .sidebar-toggle {
@@ -69,31 +69,32 @@ $app-primary-color: #007bff;
   }
 
   .breadcrumb-container {
-    margin-top: -2rem; // Pull up the breadcrumb
-    padding: 0.5rem 0; // Optional: Keep padding for other sides
+    margin-top: -5rem; 
+    padding: 2rem 3;
+   margin-left: 30px; 
 }
 
 }
 
 .main-content {
-  flex: 1; /* Take the remaining space */
-  transition: margin-left 0.3s ease; /* Smooth transition for content area */
-  margin-left: 0; /* Initially no margin */
+  flex: 1; 
+  transition: margin-left 0.3s ease; 
+  margin-left: 0;
 
   .app-sidebar.visible + & {
-    margin-left: 200px; /* Adjust content margin when sidebar is visible */
+    margin-left: 200px; 
   }
 }
 
 .footer {
-  height: 40px; /* Set footer height */
-  background-color: #343a40; /* Footer background color */
-  color: white; /* Footer text color */
+  height: 40px; 
+  background-color: #343a40;
+  color: white; 
   display: flex;
-  align-items: center; /* Center items vertically */
-  justify-content: center; /* Center items horizontally */
-  padding: 0; /* No padding for close alignment */
-  margin: 0; /* No margin for close alignment */
-  flex-shrink: 0; /* Prevent shrinking */
-  z-index: 1000; /* Lower z-index than sidebar */
+  align-items: center; 
+  justify-content: center; 
+  padding: 0; 
+  margin: 0; 
+  flex-shrink: 0; 
+  z-index: 1000; 
 }

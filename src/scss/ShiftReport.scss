@@ -1,11 +1,6 @@
 .shift-report-card {
     padding: 50px;
-    margin: 20px auto;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 80%;
-    max-width: 800px;
+   
   }
   
   .shift-report-heading {
@@ -21,8 +16,8 @@
   }
   
   .shift-card {
-    background-color: #ffffff;
-    padding: 15px;
+    background-color: ghostwhite;
+    padding: 10px;
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -34,8 +29,9 @@
   }
   
   .shift-table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
+    margin-left: 60px;
   }
   
   .shift-table th, .shift-table td {

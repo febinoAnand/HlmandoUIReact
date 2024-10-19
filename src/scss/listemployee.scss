@@ -1,17 +1,17 @@
-// listemployee.scss
 
-
-   // listemployee.scss
 .list-employee {
-    margin-top: 80px; // Space above the list employee section
-    margin-bottom: 30px; // Space below the list employee section
+    margin-top: 20px; 
+    margin-bottom: 30px; 
+    margin-left: 90px;
 
     .search-card, .table-card {
-        background-color: #f9f9f9; // Light background for cards
-        border: 1px solid #ddd; // Card border
-        border-radius: 20px; // Rounded corners
-        padding: 20px; // Padding inside cards
-        margin-bottom: 20px; // Space between cards
+        background-color: #f9f9f9; 
+        border: 1px solid #ddd; 
+        border-radius: 20px; 
+        padding: 20px; 
+        margin-bottom: 20px; 
+        width: 90%;
+
 
         h2 {
             margin-bottom: 10px; 
