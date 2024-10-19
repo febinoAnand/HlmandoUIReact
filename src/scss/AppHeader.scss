@@ -1,0 +1,99 @@
+$app-background: #f8f9fa;
+$app-primary-color: #007bff;
+
+.app-container {
+  display: flex;
+  height: 100vh; /* Full height for the container */
+}
+
+.app-sidebar {
+  background-color: $app-primary-color; 
+  color: white;
+  transition: transform 0.3s ease; /* Smooth transition for sidebar */
+  transform: translateX(-100%); /* Start hidden by moving offscreen */
+  position: fixed; /* Fixed positioning for overlay */
+  height: 100%; /* Full height */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  z-index: 2000; /* High z-index for overlay effect */
+
+  &.visible {
+    transform: translateX(0); /* Bring back into view when visible */
+  }
+}
+
+.app-header {
+  position: sticky;
+  top: 0;
+  background-color: $app-background;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  z-index: 1000;
+  padding: 0.5rem 1rem; /* Reduced padding for a smaller header */
+  height: 50px; /* Adjust the height as needed */
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; /* Ensure children fit within the new header height */
+  }
+
+  .sidebar-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+
+  .header-nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+
+    .nav-link {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: $app-primary-color; 
+      font-weight: 600;
+
+      &:hover {
+        text-decoration: underline; 
+      }
+    }
+  }
+
+  .header-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 0.5rem 0;
+  }
+
+  .breadcrumb-container {
+    margin-top: -2rem; // Pull up the breadcrumb
+    padding: 0.5rem 0; // Optional: Keep padding for other sides
+}
+
+}
+
+.main-content {
+  flex: 1; /* Take the remaining space */
+  transition: margin-left 0.3s ease; /* Smooth transition for content area */
+  margin-left: 0; /* Initially no margin */
+
+  .app-sidebar.visible + & {
+    margin-left: 200px; /* Adjust content margin when sidebar is visible */
+  }
+}
+
+.footer {
+  height: 40px; /* Set footer height */
+  background-color: #343a40; /* Footer background color */
+  color: white; /* Footer text color */
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  padding: 0; /* No padding for close alignment */
+  margin: 0; /* No margin for close alignment */
+  flex-shrink: 0; /* Prevent shrinking */
+  z-index: 1000; /* Lower z-index than sidebar */
+}

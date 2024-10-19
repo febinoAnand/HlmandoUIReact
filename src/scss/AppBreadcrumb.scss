@@ -1,0 +1,25 @@
+/* src/AppBreadcrumb.css */
+
+.breadcrumb {
+    padding: 10px 20px;
+  }
+  
+  .breadcrumb ul {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .breadcrumb li {
+    display: inline;
+  }
+  
+  .breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+  

@@ -1,0 +1,147 @@
+.dashboard {
+
+    .content-container {
+        display: flex;
+        flex-direction: column; // Ensures cards are stacked vertically
+
+        // Card for search functionality
+        .card {
+            margin-bottom: 20px; // Space between cards
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            width: 100%; // Full width of the container
+
+            // Search input and buttons
+            .search-container {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .search-input {
+                    width: 160px;
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    border-radius: 70px;
+                    margin-right: 10px;
+                }
+
+                .search-button {
+                    padding: 10px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    margin-left: -44px;
+                }
+
+                // Checkbox group for machine groups
+                .checkbox-group {
+                    margin-left: 20px;
+
+                    label {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+
+        // Container for machine groups
+        .machines-container {
+            display: flex;
+            flex-direction: column; 
+            gap: 40px; 
+            // Individual machine card style
+            .group-card {
+                border: 1px solid #ccc;
+                padding: 15px;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-sizing: border-box; 
+
+                // Circle styling for machines
+                .circle {
+                    position: relative;
+                    width: 150px; // Fixed width for circles
+                    height: 150px;
+                    border: 5px solid #007acc;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: white;
+                    margin-bottom: 10px; // Space between circle and text
+
+                    // Top tab for machine status
+                    .top-tab {
+                        position: absolute;
+                        top: -15px;
+                        left: -15px;
+                        width: 70px;
+                        height: 50px;
+                        background-color: #007acc;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        // Indicator for machine status
+                        .status-indicator {
+                            position: absolute;
+                            top: 8px;
+                            left: 8px;
+                            width: 12px;
+                            height: 12px;
+                            background-color: #00cc00;
+                            border-radius: 50%;
+                        }
+
+                        .machine-name {
+                            color: white;
+                            font-size: 12px;
+                            font-weight: bold;
+                            margin-top: 15px;
+                            text-align: center;
+                        }
+                    }
+
+                    // Circle content for current/max values
+                    .circle-content {
+                        text-align: center;
+
+                        .values {
+                            .current,
+                            .max {
+                                font-size: 20px;
+                                font-weight: bold;
+                            }
+
+                            // Divider between current and max values
+                            .divider {
+                                margin: 7px 0;
+                                border: none;
+                                height: 1px;
+                                background-color: black;
+                                width: 70px;
+                            }
+                        }
+
+                        // Progress bar for machine status
+                        .progress-bar {
+                            width: 80px;
+                            height: 10px;
+                            background-color: #00cc00;
+                            border-radius: 5px;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

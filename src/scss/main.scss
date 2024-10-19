@@ -1,0 +1,28 @@
+// src/scss/main.scss
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; // Full height
+  
+    .main-content {
+      flex: 1;
+      padding: 20px; // Add some padding
+      background-color: #f8f9fa; // Light background for contrast
+      transition: margin-left 0.3s ease;
+    }
+  
+    .app-header {
+      background-color: #007bff; // Header color
+      color: white;
+      padding: 10px 20px; // Header padding
+    }
+  
+    .app-footer {
+      background-color: #343a40; // Dark footer
+      color: white;
+      padding: 10px 20px; // Footer padding
+      text-align: center; // Centered text
+    }
+  }
+  

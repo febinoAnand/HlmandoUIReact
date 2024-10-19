@@ -1,0 +1,143 @@
+
+.production-monitor {
+    background-color: #f4f4f4;
+    display: inline;
+
+    .header {
+        margin-bottom: 20px;
+        background-color: transparent;
+
+
+        h1 {
+            font-size: 20px;
+            color: #333;
+        }
+    }
+
+    .controls-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        margin-bottom: 20px; 
+        position: relative; 
+
+        .controls {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .date-input {
+                padding: 8px;
+                margin-right: 10px;
+                border: 1px solid  #047BC4;
+                border-radius: 4px;
+                width: 200px; 
+
+                @media (max-width: 768px) {
+                    width: 60%;
+                    margin-bottom: 10px; 
+                }
+            }
+
+            .search-button,
+            .filter-button,
+            .download-button {
+                padding: 8px 12px;
+                border: none;
+                border-radius: 4px;
+                color: white;
+                cursor: pointer;
+                font-size: 14px;
+                margin-left: 20px;
+
+                @media (max-width: 768px) {
+                    margin-left: 10px; 
+                    margin-top: 20px;
+                    width: 30%; 
+                }
+            }
+
+            .search-button {
+                background-color: #047BC4;
+            }
+
+            .filter-button {
+                background-color: white;
+                color: #007bff;
+                border: 1px solid #047BC4;
+                outline: none;
+
+                &:hover {
+                    background-color: #e9ecef;
+                }
+            }
+
+            .download-button {
+                background-color: white;
+                color: #007bff;
+                border: 1px solid #047BC4;
+                outline: none;
+                margin-left: auto;
+
+                &:hover {
+                    background-color: #e9ecef;
+                }
+            }
+        }
+    }
+
+    .table-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        overflow-x: auto; 
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .shift-header {
+            font-size: 16px; 
+            color: #333; 
+            margin-bottom: 20px;
+        }
+        
+
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th,
+            td {
+                padding: 8px;
+                border: 1px solid #ddd;
+                text-align: left;
+                font-size: 14px;
+
+                @media (max-width: 768px) {
+                    font-size: 12px; 
+                    padding: 4px;
+                }
+            }
+
+            th {
+                background-color: #047BC4;
+                color: white;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+                
+            }
+            
+             .total {
+                color: #007bff; 
+            }
+        }
+
+    }
+}
